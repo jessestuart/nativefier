@@ -1,16 +1,17 @@
-import path from 'path';
-import packager from 'electron-packager';
-import tmp from 'tmp';
-import ncp from 'ncp';
 import async from 'async';
 import hasBinary from 'hasbin';
 import log from 'loglevel';
-import DishonestProgress from '../helpers/dishonestProgress';
-import optionsFactory from '../options/optionsMain';
-import iconBuild from './iconBuild';
-import helpers from '../helpers/helpers';
-import PackagerConsole from '../helpers/packagerConsole';
+import ncp from 'ncp';
+import packager from 'electron-packager';
+import path from 'path';
+import tmp from 'tmp';
+
 import buildApp from './buildApp';
+import DishonestProgress from '../helpers/dishonestProgress';
+import helpers from '../helpers/helpers';
+import iconBuild from './iconBuild';
+import optionsFactory from '../options/optionsMain';
+import PackagerConsole from '../helpers/packagerConsole';
 
 const copy = ncp.ncp;
 const { isWindows } = helpers;
